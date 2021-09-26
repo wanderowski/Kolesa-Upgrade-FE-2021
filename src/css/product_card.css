@@ -233,11 +233,14 @@
 .card__headers {
     font-size: 14px;
     font-weight: 600;
+    line-height: 24px;
 }
 
 .card__description {
     font-weight: 400;
+    font-size: 14px;
     padding-top: 4px;
+    line-height: 24px;
 }
 
 .card__choose {
