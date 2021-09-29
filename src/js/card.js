@@ -24,7 +24,6 @@ function previewClick(event) {
             colorElems.filter(elem => elem.id === 'color-gray')[0].checked = true;
             break;
         default:
-
             break;
     }
 }

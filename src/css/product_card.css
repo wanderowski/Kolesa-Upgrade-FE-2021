@@ -76,6 +76,10 @@
     border-radius: 5px;
 }
 
+.card__btn {
+    margin-top: 8px;
+}
+
 .card__desc {
     display: block;
 }
@@ -101,22 +105,6 @@
 .info__points {
     margin: 8px 0;
     font-weight: 600;
-}
-
-.card__btn {
-    font-size: 14px;
-    font-family: inherit;
-    padding: 8px 35px;
-    margin-top: 8px;
-    border: none;
-    outline: none;
-    border-radius: 8px;
-    cursor: pointer
-}
-
-.card__btn-blue {
-    background: #2a81dd;
-    color: white;
 }
 
 .actions__balance {
