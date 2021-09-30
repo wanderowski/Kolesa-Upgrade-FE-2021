@@ -86,7 +86,7 @@ body {
 
 .nav__item-active,
 .nav__item:hover {
-    font-weight: 600;
+    color: #2a81dd;
 }
 
 .nav__item-active::before {
@@ -119,8 +119,9 @@ body {
     height: 16px;
     position: absolute;
     left: 20px;
-    background-image: url('/src/assets/search.png');
+    background-image: url('/src/assets/search.svg');
     background-size: cover;
+    background-color: transparent;
     outline: none;
     border: none;
     cursor: pointer;
@@ -140,7 +141,10 @@ body {
 
 .search__field:focus,
 .search__field:active {
-    border: 2px solid #2a81dd;
+    background-color: #e9f2fb;
+    -webkit-box-shadow: 0 0 12px 0 rgba(42, 129, 221, 0.2) inset;
+    -moz-box-shadow: 0 0 12px 0 rgba(42, 129, 221, 0.2) inset;
+    box-shadow: 0 0 12px 0 rgba(42, 129, 221, 0.2) inset;
 }
 
 .header__user {
