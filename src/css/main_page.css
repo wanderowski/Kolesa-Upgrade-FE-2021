@@ -1,11 +1,40 @@
 @font-face {
     font-family: 'Open Sans';
-    src:
-        local('Open Sans'),
-        url(https://fonts.gstatic.com/s/opensans/v26/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSKmu1aB.woff2) format('woff2');
+    src: url('/src/fonts/OpenSans-Light.ttf') format('truetype');
+    font-weight: 300;
 }
 
-* {
+@font-face {
+    font-family: 'Open Sans';
+    src: url('/src/fonts/OpenSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('/src/fonts/OpenSans-Medium.ttf') format('truetype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('/src/fonts/OpenSans-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('/src/fonts/OpenSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('/src/fonts/OpenSans-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+}
+
+body {
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -187,6 +216,7 @@
     cursor: pointer;
     transition: 0.1s border;
     border: 1px solid transparent;
+    font-family: inherit;
 }
 
 .points__box:hover {
