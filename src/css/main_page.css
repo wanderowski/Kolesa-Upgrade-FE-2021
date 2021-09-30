@@ -138,7 +138,7 @@ body {
 
 .search__field {
     height: 44px;
-    padding-left: 56px;
+    padding: 0 20px 0 54px;
     background-color: #f2f2f3;
     border: none;
     outline: none;
@@ -233,7 +233,10 @@ body {
 }
 
 .points__box:hover {
-    border: 1px dashed #2a81dd;
+    color: #2a81dd;
+    -webkit-box-shadow: 0 0 8px -4px rgba(34, 60, 80, 0.8);
+    -moz-box-shadow: 0 0 8px -4px rgba(34, 60, 80, 0.8);
+    box-shadow: 0 0 8px -4px rgba(34, 60, 80, 0.8);
 }
 
 .points__emoji {
