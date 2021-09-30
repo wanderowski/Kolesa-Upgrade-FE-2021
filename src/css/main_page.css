@@ -319,7 +319,9 @@ body {
 }
 
 .cards__card:hover {
-    box-shadow: 0 2px 8px 4px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 0 8px -2px rgba(34, 60, 80, 0.6);
+    -moz-box-shadow: 0 0 8px -2px rgba(34, 60, 80, 0.6);
+    box-shadow: 0 0 8px -2px rgba(34, 60, 80, 0.6);
 }
 
 .cards__card:hover .card__btn {
