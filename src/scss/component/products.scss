@@ -1,0 +1,15 @@
+.products {
+    &__types {
+        display: inline-flex;
+        gap: 9px;
+        padding: 0 0 16px;
+    }
+
+    &__cards {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 330px);
+        gap: 12px;
+        justify-content: space-between;
+    }
+}

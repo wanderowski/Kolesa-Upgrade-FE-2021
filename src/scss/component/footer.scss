@@ -1,0 +1,23 @@
+.footer {
+    &__wrapper {
+        padding: 20px 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__social {
+        @include flex-column;
+
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 16px;
+    }
+
+    &__contact {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+}

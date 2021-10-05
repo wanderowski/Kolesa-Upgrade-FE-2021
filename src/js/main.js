@@ -1,5 +1,4 @@
 import '../css/style.css';
-import '../scss/styles.scss';
 
 const appElement = document.querySelector('#app');
 

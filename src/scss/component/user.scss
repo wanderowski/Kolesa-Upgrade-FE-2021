@@ -1,0 +1,26 @@
+.user {
+    &__avatar {
+        border-radius: 50%;
+    }
+
+    &__desc {
+        @include flex-column;
+
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    &__name {
+        color: $blue-main;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    &__points {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        color: $black-primary;
+    }
+}
