@@ -1,4 +1,11 @@
 .footer {
+    @include flex-column;
+
+    background-color: $black-primary;
+    color: $white;
+    align-items: center;
+    flex-shrink: 0;
+
     &__wrapper {
         padding: 20px 0;
         width: 100%;
