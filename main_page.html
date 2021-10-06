@@ -20,7 +20,7 @@
                     height="35">
                 </a>
                 <div class="main__aside">
-                    <nav class="main__nav">
+                    <nav class="nav">
                         <a href="#" class="nav__item">Оргсхема</a>
                         <a href="#" class="nav__item">Kolesa Team</a>
                         <a href="#" class="nav__item nav__item-active">Kolesa Shop</a>
@@ -32,24 +32,24 @@
                         <a href="#" class="nav__item">FAQ</a>
                     </nav>
                 </div>
-                <header class="main__header">
-                    <div class="header__search">
+                <header class="header">
+                    <div class="header__search search">
                         <button
-                        class="search__icon">
+                            class="search__icon" aria-label="Поиск">
                         </button>
                         <input
-                        type="search"
-                        class="search__field"
-                        placeholder="Поиск"
+                            type="search"
+                            class="search__field"
+                            placeholder="Поиск"
                         >
                     </div>
-                    <a href="#" class="header__user">
+                    <a href="#" class="user">
                         <img
-                        src="/src/assets/avatar.png"
-                        alt="Аватар"
-                        width="44"
-                        height="44"
-                        class="user__avatar">
+                            src="/src/assets/avatar.png"
+                            alt="Аватар"
+                            width="44"
+                            height="44"
+                            class="user__avatar">
                         <span class="user__desc">
                             <span class="user__name">
                                 Мортиджан
@@ -62,7 +62,7 @@
                 </header>
                 <div class="main__content">
                     <img src="/src/assets/banner.png" alt="Летняя Распродажа" class="main__banner">
-                    <div class="main__points">
+                    <div class="main__points points">
                         <button class="points__box points__get">
                             <img
                             src="/src/assets/emoji_plus.png"
@@ -90,23 +90,23 @@
                             <span class="points__desc">Подарить баллы</span>
                         </button>
                     </div>
-                    <div class="main__products">
+                    <div class="main__products products">
                         <div class="products__types">
-                            <input type="radio" name="Type" class="types__radio" id="all">
-                            <label class="types__type" for="all">
+                            <input type="radio" name="Type" class="products__radio" id="all">
+                            <label class="products__type" for="all">
                                 Все товары
                             </label>
-                            <input type="radio" name="Type" class="types__radio" id="clothes">
-                            <label class="types__type" for="clothes">
+                            <input type="radio" name="Type" class="products__radio" id="clothes">
+                            <label class="products__type" for="clothes">
                                 Одежда
                             </label>
-                            <input type="radio" name="Type" class="types__radio" id="accessories">
-                            <label class="types__type" for="accessories">
+                            <input type="radio" name="Type" class="products__radio" id="accessories">
+                            <label class="products__type" for="accessories">
                                 Аксессуары
                             </label>
                         </div>
                         <div class="products__cards">
-                            <div class="cards__card">
+                            <div class="card">
                                 <img
                                 src="/src/assets/t-shirt.png"
                                 alt='Футболка "Эволюционируй или сдохни"'
@@ -130,7 +130,7 @@
                                 </div>
 
                             </div>
-                            <div class="cards__card">
+                            <div class="card">
                                 <img
                                 src="/src/assets/t-shirt.png"
                                 alt='Футболка "Эволюционируй или сдохни"'
@@ -156,7 +156,7 @@
                                 </div>
 
                             </div>
-                            <div class="cards__card">
+                            <div class="card">
                                 <img
                                 src="/src/assets/t-shirt.png"
                                 alt='Футболка "Эволюционируй или сдохни"'
@@ -179,7 +179,7 @@
                                 </div>
 
                             </div>
-                            <div class="cards__card">
+                            <div class="card">
                                 <img
                                 src="/src/assets/t-shirt.png"
                                 alt="Свитшот"
@@ -201,7 +201,7 @@
                                 </div>
 
                             </div>
-                            <div class="cards__card">
+                            <div class="card">
                                 <img
                                 src="/src/assets/t-shirt.png"
                                 alt="Свитшот"
@@ -223,7 +223,7 @@
                                 </div>
 
                             </div>
-                            <div class="cards__card">
+                            <div class="card">
                                 <img
                                 src="/src/assets/t-shirt.png"
                                 alt="Свитшот"
@@ -245,7 +245,7 @@
                                 </div>
 
                             </div>
-                            <div class="cards__card">
+                            <div class="card">
                                 <img
                                 src="/src/assets/t-shirt.png"
                                 alt="Свитшот"
@@ -267,7 +267,7 @@
                                 </div>
 
                             </div>
-                            <div class="cards__card">
+                            <div class="card">
                                 <img
                                 src="/src/assets/t-shirt.png"
                                 alt="Свитшот"
@@ -289,7 +289,7 @@
                                 </div>
 
                             </div>
-                            <div class="cards__card">
+                            <div class="card">
                                 <img
                                 src="/src/assets/t-shirt.png"
                                 alt="Свитшот"
@@ -311,7 +311,7 @@
                                 </div>
 
                             </div>
-                            <div class="cards__card">
+                            <div class="card">
                                 <img
                                 src="/src/assets/t-shirt.png"
                                 alt="Свитшот"
@@ -333,7 +333,7 @@
                                 </div>
 
                             </div>
-                            <div class="cards__card">
+                            <div class="card">
                                 <img
                                 src="/src/assets/t-shirt.png"
                                 alt="Свитшот"
@@ -355,7 +355,7 @@
                                 </div>
 
                             </div>
-                            <div class="cards__card">
+                            <div class="card">
                                 <img
                                 src="/src/assets/t-shirt.png"
                                 alt="Свитшот"
@@ -388,20 +388,20 @@
         <div class="container">
             <div class="footer__wrapper">
                 <div class="footer__social">
-                    <span class="social__copyright">
+                    <span class="footer__copyright">
                         © Kolesa Group
                     </span>
-                    <div class="social__icons">
-                        <a href="https://vk.com/kolesakz" target="_blank"><img src="/src/assets/VK.png" alt="VK" class="social__icon"></a>
-                        <a href="https://www.youtube.com/user/kolesakzvideo" target="_blank"><img src="/src/assets/YouTube.png" alt="YouTube" class="social__icon"></a>
-                        <a href="https://www.instagram.com/kolesagroup/" target="_blank"><img src="/src/assets/Instagram.png" alt="Instagram" class="social__icon"></a>
+                    <div class="footer__icons">
+                        <a href="https://vk.com/kolesakz" target="_blank"><img src="/src/assets/VK.png" alt="VK" class="footer__icon"></a>
+                        <a href="https://www.youtube.com/user/kolesakzvideo" target="_blank"><img src="/src/assets/YouTube.png" alt="YouTube" class="footer__icon"></a>
+                        <a href="https://www.instagram.com/kolesagroup/" target="_blank"><img src="/src/assets/Instagram.png" alt="Instagram" class="footer__icon"></a>
                     </div>
                 </div>
                 <div class="footer__contact">
-                    <span class="contact__desc">
+                    <span class="footer__desc">
                         Есть идеи что улучшить?<br>Не знаешь, с кем решить проблему?
                     </span>
-                    <button class="contact__send btn">
+                    <button class="footer__send btn">
                         Написать
                     </button>
                 </div>

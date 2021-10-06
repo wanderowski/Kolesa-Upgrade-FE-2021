@@ -31,20 +31,6 @@
         grid-area: logo;
     }
 
-    &__nav {
-        @include flex-column;
-
-        align-items: flex-start;
-        justify-content: space-between;
-    }
-
-    &__header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        grid-area: header;
-    }
-
     &__content {
         @include flex-column;
 

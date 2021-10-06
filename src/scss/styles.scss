@@ -1,10 +1,8 @@
 @import './common/vars.scss';
 @import './common/common.scss';
 @import './common/fonts.scss';
-@import './component/mixins.scss';
+@import './common/mixins.scss';
 @import './component/card.scss';
-@import './component/cards.scss';
-@import './component/contact.scss';
 @import './component/footer.scss';
 @import './component/header.scss';
 @import './component/main.scss';
@@ -12,8 +10,6 @@
 @import './component/points.scss';
 @import './component/products.scss';
 @import './component/search.scss';
-@import './component/social.scss';
-@import './component/types.scss';
 @import './component/user.scss';
 
 html,

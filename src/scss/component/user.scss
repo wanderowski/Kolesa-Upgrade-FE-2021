@@ -1,4 +1,11 @@
 .user {
+    padding: 5px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
     &__avatar {
         border-radius: 50%;
     }
@@ -23,4 +30,8 @@
         line-height: 20px;
         color: $black-primary;
     }
+}
+
+.user:hover {
+    background-color: $payed-blue;
 }

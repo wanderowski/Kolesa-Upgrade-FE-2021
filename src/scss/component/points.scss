@@ -1,4 +1,10 @@
 .points {
+    padding: 24px 0 40px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+
     &__box {
         padding: 20px 24px;
         display: flex;

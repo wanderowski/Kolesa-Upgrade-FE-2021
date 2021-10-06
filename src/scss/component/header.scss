@@ -1,21 +1,10 @@
 .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-area: header;
+
     &__search {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
         position: relative;
-    }
-
-    &__user {
-        padding: 5px;
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 16px;
-    }
-
-    &__user:hover {
-        background-color: $payed-blue;
     }
 }

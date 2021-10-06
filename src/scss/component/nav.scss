@@ -1,4 +1,9 @@
 .nav {
+    @include flex-column;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
     &__item {
         margin-bottom: 24px;
         font-size: 16px;
