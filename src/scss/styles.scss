@@ -1,5 +1,6 @@
 @import './common/vars.scss';
 @import './common/common.scss';
+@import './common/fonts.scss';
 @import './component/mixins.scss';
 @import './component/card.scss';
 @import './component/cards.scss';
@@ -15,42 +16,6 @@
 @import './component/types.scss';
 @import './component/user.scss';
 
-@font-face {
-    font-family: 'Open Sans';
-    src: url('/src/fonts/OpenSans-Light.ttf') format('truetype');
-    font-weight: 300;
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    src: url('/src/fonts/OpenSans-Regular.ttf') format('truetype');
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    src: url('/src/fonts/OpenSans-Medium.ttf') format('truetype');
-    font-weight: 500;
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    src: url('/src/fonts/OpenSans-SemiBold.ttf') format('truetype');
-    font-weight: 600;
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    src: url('/src/fonts/OpenSans-Bold.ttf') format('truetype');
-    font-weight: 700;
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    src: url('/src/fonts/OpenSans-ExtraBold.ttf') format('truetype');
-    font-weight: 800;
-}
-
 html,
 body {
     height: 100%;
@@ -60,4 +25,9 @@ body {
     font-family: 'Open Sans', sans-serif;
 
     @include flex-column;
+}
+
+a {
+    text-decoration: none;
+    color: $blue-main;
 }
