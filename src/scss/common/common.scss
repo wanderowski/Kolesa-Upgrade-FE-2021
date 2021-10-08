@@ -16,7 +16,17 @@
     cursor: pointer;
 
     &--blue {
-        background: #2a81dd;
-        color: white;
+        background: $blue-main;
+        color: $white;
+    }
+
+    &--white {
+        background: $white;
+        color: $blue-main;
+
+        &:hover {
+            background: $blue-main;
+            color: $white;
+        }
     }
 }
