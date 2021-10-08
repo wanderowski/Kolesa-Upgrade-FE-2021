@@ -1,0 +1,29 @@
+@import './common/vars.scss';
+@import './common/common.scss';
+@import './common/fonts.scss';
+@import './common/mixins.scss';
+@import './component/card.scss';
+@import './component/footer.scss';
+@import './component/header.scss';
+@import './component/main.scss';
+@import './component/nav.scss';
+@import './component/points.scss';
+@import './component/products.scss';
+@import './component/search.scss';
+@import './component/user.scss';
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+
+    @include flex-column;
+}
+
+a {
+    text-decoration: none;
+    color: $blue-main;
+}
