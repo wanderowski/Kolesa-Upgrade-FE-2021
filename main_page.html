@@ -9,7 +9,92 @@
     <title>Главная страница</title>
 </head>
 <body>
+
     <div class="main">
+        <div class="main__modal modal js__modal">
+            <div class="modal__background js__background"></div>
+            <div class="container js__container">
+                <div class="modal__wrapper">
+                    <button class="modal__close js__close-button">
+                    </button>
+                        <div class="modal__pics">
+                            <div class="modal__pic">
+                                <img
+                                id="mainPreview"
+                                src=""
+                                alt=""
+                                width=330
+                                height=330
+                                >
+                            </div>
+                            <div class="modal__hint">
+                                <label>
+                                    <input type="radio" name="preview" class="modal__radio" id="preview-milk">
+                                    <img
+                                    src="./src/assets/🌆 preview_1.png"
+                                    alt="Бежевый цвет"
+                                    width=50
+                                    height=50
+                                    onclick="previewClick(event)">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="modal__desc">
+                            <h1 class="modal__name"></h1>
+                            <div class="modal__actions">
+                                <div class="modal__info">
+                                    <p class="modal__points">
+                                        баллов
+                                    </p>
+                                    <button class="btn btn--blue modal__btn">Заказать</button>
+                                </div>
+                                <div class="modal__balance">
+                                    <p class="modal__balance-desc">
+                                        Твой баланс:
+                                        <span class="modal__balance-value">3945 баллов</span>
+                                    </p>
+                                    <span class="modal__balance-logo">
+                                        🛍
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="modal__size">
+                                <span class="modal__size-desc">Размеры:</span>
+                                <div class="modal__options">
+                                    <label>
+                                        <input type="radio" name="size" class="modal__radio" checked>
+                                        <div class="modal__radio-container">
+                                            <span class="modal__size-name">S</span>
+                                        </div>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="size" class="modal__radio">
+                                        <div class="modal__radio-container">
+                                            <span class="modal__size-name">M</span>
+                                        </div>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="size" class="modal__radio">
+                                        <div class="modal__radio-container">
+                                            <span class="modal__size-name">L</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="modal__details">
+                                <span class="modal__headers">Детали:</span>
+                                <p class="modal__description">
+
+                                </p>
+                            </div>
+                            <div class="modal__choose">
+                                <span class="modal__headers">Как выбрать размер:</span>
+                                <p class="modal__description">Написать дяде Рику для уточнения.</p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
         <div class="container">
             <div class="main__wrapper">
                 <a href="/main_page.html" class="main__logo">
@@ -106,7 +191,7 @@
                             </label>
                         </div>
                         <div class="products__cards js__catalog">
-                            <div class="card">
+                            <div class="card js__card">
                                 <img
                                 src="/src/assets/t-shirt.png"
                                 alt='Футболка "Эволюционируй или сдохни"'
@@ -130,7 +215,7 @@
                                 </div>
 
                             </div>
-                            <div class="card">
+                            <div class="card js__card">
                                 <img
                                 src="/src/assets/t-shirt.png"
                                 alt='Футболка "Эволюционируй или сдохни"'
@@ -156,7 +241,7 @@
                                 </div>
 
                             </div>
-                            <div class="card">
+                            <div class="card js__card">
                                 <img
                                 src="/src/assets/t-shirt.png"
                                 alt='Футболка "Эволюционируй или сдохни"'
@@ -211,5 +296,7 @@
         </div>
     </footer>
     <script type="module" src="/src/js/main_page.js"></script>
+    <script type="module" src="/src/js/modal.js"></script>
+
 </body>
 </html>
