@@ -1,8 +1,5 @@
 import '../scss/styles.scss';
 
-// eslint-disable-next-line no-unused-vars
-import { colorClick, previewClick } from './modal';
-
 let currentCategory = '';
 
 const categoryButtons = document.querySelectorAll('.js__category-button');
@@ -305,8 +302,6 @@ categoryButtons
                     } else if (categoryKey === 'all') {
                         renderCategory(all);
                         currentCategory = 'all';
-                    } else {
-                        alert('Данной категории товара не существует');
                     }
                 }
 
