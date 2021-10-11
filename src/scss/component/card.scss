@@ -60,13 +60,14 @@
     -webkit-box-shadow: 0 0 8px -2px rgba(34, 60, 80, 0.6);
     -moz-box-shadow: 0 0 8px -2px rgba(34, 60, 80, 0.6);
     box-shadow: 0 0 8px -2px rgba(34, 60, 80, 0.6);
-}
-
-.card:hover .btn {
-    visibility: visible;
+    cursor: pointer;
 }
 
 .card .btn {
     visibility: hidden;
     margin-bottom: 16px;
+}
+
+.card:hover .btn {
+    visibility: visible;
 }

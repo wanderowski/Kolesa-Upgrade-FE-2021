@@ -249,11 +249,12 @@ const renderModal = (image, title, price, details) => {
 const updateModal = (id) => {
     const {
         img, title, price, details,
-    } = all.filter(elem => elem.id === parseInt(id, 10))[0]; // Используя массив всех товаров, находим нужный при помощи фильтра
+    } = all.filter(elem => elem.id === parseInt(id, 10))[0]; // Используя массив всех товаров, находим нужный нам товар при помощи фильтра
 
     const containerNode = document.querySelector('.js__container'); // Находим узел контейнера для последующего удаления
 
     modal.removeChild(containerNode); // Удаляем контейнер, чтобы установить новый с обновленными данными
+
     modal.appendChild(renderModal(img, title, price, details)); // Рендерим новый контейнер и аппендим его в модалку
 
     // Данная часть кода обновляет eventListener для кнопки закрытия. Без нее, при смене категории, eventListener перестает работать
@@ -268,6 +269,14 @@ const renderCategory = (category) => {
     const catalog = document.querySelector('.js__catalog');
 
     while (catalog.firstChild) {
+        if (catalog.lastChild.dataset) {
+            catalog.lastChild.removeEventListener('click', () => {
+                updateModal(catalog.lastChild.dataset.id);
+
+                modal.style.display = 'block';
+            });
+        }
+
         catalog.removeChild(catalog.lastChild); // Удаляем все элементы до тех пор, пока не останется чайлдов у каталога
     }
 
@@ -292,7 +301,7 @@ categoryButtons
                 const btn = event.target;
                 const categoryKey = btn.dataset.key;
 
-                if (categoryKey !== currentCategory) { // Проверка выбрана новая или старая категория
+                if (categoryKey !== currentCategory) { // Проверка: выбрана новая или старая категория
                     if (categoryKey === 'clothes') {
                         renderCategory(clothes);
                         currentCategory = 'clothes';
@@ -305,17 +314,7 @@ categoryButtons
                     }
                 }
 
-                // Здесь также обновляются eventListener'ы для каждой кнопки после ре-рендера
-                document.querySelectorAll('.js__order-button')
-                    .forEach((elem) => {
-                        const { id } = elem.parentElement.parentElement.dataset;
-
-                        elem
-                            .addEventListener('click', () => {
-                                updateModal(id);
-                                modal.style.display = 'block';
-                            });
-                    });
+                // Здесь  обновляются eventListener'ы для каждой карточки после ре-рендера
                 document.querySelectorAll('.js__card')
                     .forEach((card) => {
                         const { id } = card.dataset;
@@ -328,18 +327,6 @@ categoryButtons
             });
     });
 
-// Данный код позволяет открывать модалку кликом по кнопке "заказать"
-document.querySelectorAll('.js__order-button')
-    .forEach((button) => {
-        const { id } = button.parentElement.parentElement.dataset;
-
-        button
-            .addEventListener('click', () => {
-                updateModal(id);
-                modal.style.display = 'block';
-            });
-    });
-
 // Данный код позволяет открывать модалку кликом по самой карточке
 document.querySelectorAll('.js__card')
     .forEach((card) => {
@@ -347,6 +334,7 @@ document.querySelectorAll('.js__card')
 
         card.addEventListener('click', () => {
             updateModal(id);
+
             modal.style.display = 'block';
         });
     });
