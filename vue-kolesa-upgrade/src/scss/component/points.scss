@@ -1,0 +1,47 @@
+.points {
+    padding: 24px 0 40px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+
+    &__box {
+        padding: 20px 24px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        outline: none;
+        border-radius: 14px;
+        color: $black-primary;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 32px;
+        cursor: pointer;
+        transition: 0.1s border;
+        border: 1px solid transparent;
+        font-family: inherit;
+    }
+
+    &__box:hover {
+        color: $blue-main;
+        -webkit-box-shadow: 0 0 8px -4px rgba(34, 60, 80, 0.8);
+        -moz-box-shadow: 0 0 8px -4px rgba(34, 60, 80, 0.8);
+        box-shadow: 0 0 8px -4px rgba(34, 60, 80, 0.8);
+    }
+
+    &__emoji {
+        width: 48px;
+    }
+
+    &__get {
+        background-color: $payed-green;
+    }
+
+    &__howto {
+        background-color: $payed-yellow;
+    }
+
+    &__gift {
+        background-color: $payed-blue;
+    }
+}

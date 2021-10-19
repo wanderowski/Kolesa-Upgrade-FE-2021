@@ -1,0 +1,38 @@
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &__icon {
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        left: 20px;
+        background-image: url('../../src/assets/search.png');
+        background-size: cover;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    &__field {
+        height: 44px;
+        padding: 0 20px 0 54px;
+        background-color: $white-darkest;
+        border: none;
+        outline: none;
+        border-radius: 8px;
+        font-size: 18px;
+        line-height: 28px;
+        transition: 0.1s all;
+    }
+
+    &__field:focus,
+    &__field:active {
+        background-color: $payed-blue;
+        -webkit-box-shadow: 0 0 12px 0 rgba(42, 129, 221, 0.2) inset;
+        -moz-box-shadow: 0 0 12px 0 rgba(42, 129, 221, 0.2) inset;
+        box-shadow: 0 0 12px 0 rgba(42, 129, 221, 0.2) inset;
+    }
+}
