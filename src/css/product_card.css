@@ -16,7 +16,7 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-.card {
+.modal__wraper {
     position: relative;
     background-color: #fff;
     border-radius: 16px;
@@ -29,7 +29,7 @@
     box-shadow: 0 0 14px 1px rgba(0, 0, 0, 0.2);
 }
 
-.card__close {
+.modal__close {
     position: absolute;
     right: 30px;
     top: 30px;
