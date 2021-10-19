@@ -1,0 +1,246 @@
+@font-face {
+    font-family: 'Open Sans';
+    src:
+        local('Open Sans'),
+        url(https://fonts.gstatic.com/s/opensans/v26/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSKmu1aB.woff2) format('woff2');
+}
+
+.container {
+    background: rgb(66, 97, 103);
+    background: radial-gradient(circle, rgba(66, 97, 103, 1) 0%, rgba(2, 0, 36, 1) 100%);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.modal__wraper {
+    position: relative;
+    background-color: #fff;
+    border-radius: 16px;
+    max-width: 1100px;
+    min-width: 700px;
+    padding: 64px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    box-shadow: 0 0 14px 1px rgba(0, 0, 0, 0.2);
+}
+
+.modal__close {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    width: 18px;
+    height: 18px;
+    background-image: url('../assets/close.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+}
+
+.card__pics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 24px;
+}
+
+.card__hint {
+    padding: 16px 0;
+    display: flex;
+    align-items: center;
+    max-width: 330px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card__radio {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.card__radio + img {
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+.card__radio:checked + img {
+    border: 1px solid #2a81dd;
+    border-radius: 5px;
+}
+
+.card__btn {
+    margin-top: 8px;
+}
+
+.card__desc {
+    display: block;
+}
+
+.card__name {
+    margin: 8px 0;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.card__actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 0 12px;
+}
+
+.actions__info {
+    display: block;
+}
+
+.info__points {
+    margin: 8px 0;
+    font-weight: 600;
+}
+
+.actions__balance {
+    background: #f0fafd;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.balance__desc {
+    padding: 0 6px;
+    height: 100%;
+    font-size: 14px;
+    font-weight: 400;
+    color: #888b94;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between
+}
+
+.balance__value {
+    color: #1c1819;
+    font-size: 16px;
+    padding-top: 12px;
+}
+
+.balance__logo {
+    font-size: 40px;
+    padding-left: 12px;
+}
+
+.card__color {
+    padding: 12px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.color__desc {
+    font-size: 14px;
+}
+
+.card__options {
+    width: 100%;
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.card__options label {
+    border: 1px solid #1c18191a;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 5px 8px 5px 0;
+}
+
+.radio__container {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.card__radio + .radio__container {
+    cursor: pointer;
+}
+
+.card__radio:checked + .radio__container {
+    background-color: #d6ecfb;
+}
+
+.color__box {
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+}
+
+#blue-darkest {
+    background-color: #00458a;
+}
+
+#milk {
+    background-color: #efe8d8;
+}
+
+#gray-lightest {
+    background-color: #d4d4da;
+}
+
+.color__name {
+    padding: 0 8px;
+}
+
+.card__size {
+    padding: 12px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.size__desc {
+    font-size: 14px;
+}
+
+.size__name {
+    padding: 0 8px;
+}
+
+.card__details {
+    padding: 12px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.card__headers {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.card__description {
+    font-weight: 400;
+    font-size: 14px;
+    padding-top: 4px;
+    line-height: 24px;
+}
+
+.card__choose {
+    padding: 12px 0;
+}

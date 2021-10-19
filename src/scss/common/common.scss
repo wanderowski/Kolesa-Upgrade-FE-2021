@@ -1,0 +1,32 @@
+.container {
+    width: 1400px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.btn {
+    min-width: 150px;
+    font-size: 14px;
+    line-height: 24px;
+    font-family: inherit;
+    padding: 8px 0;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &--blue {
+        background: $blue-main;
+        color: $white;
+    }
+
+    &--white {
+        background: $white;
+        color: $blue-main;
+
+        &:hover {
+            background: $blue-main;
+            color: $white;
+        }
+    }
+}

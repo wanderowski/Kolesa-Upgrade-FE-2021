@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="/src/css/common.css">
+    <link rel="stylesheet" href="./src/css/product_card.css">
+    <title>Product Card</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <button class="card__close">
+
+            </button>
+            <div class="card__pics">
+                <div class="card__pic">
+                    <img
+                    id="mainPreview"
+                    src="./src/assets/shirt.png"
+                    alt='Футболка "Эволюционируй или сдохни"'
+                    width=330
+                    height=330
+                    >
+                </div>
+                <div class="card__hint">
+                    <label>
+                        <input type="radio" name="preview" class="card__radio" id="preview-milk">
+                        <img
+                        src="./src/assets/🌆 preview_1.png"
+                        alt="Бежевый цвет"
+                        width=50
+                        height=50
+                        onclick="previewClick(event)">
+                    </label>
+
+                    <label>
+                        <input type="radio" name="preview" class="card__radio" id="preview-blue" checked>
+                        <img
+                        src="./src/assets/shirt.png"
+                        alt="Синий цвет"
+                        width=50
+                        height=50
+                        onclick="previewClick(event)">
+                    </label>
+
+                    <label>
+                        <input type="radio" name="preview" class="card__radio" id="preview-gray">
+                        <img
+                        src="./src/assets/🌆 preview_3.png"
+                        alt="Серый цвет"
+                        width=50
+                        height=50
+                        onclick="previewClick(event)">
+                    </label>
+                </div>
+            </div>
+            <div class="card__desc">
+                <h1 class="card__name">Футболка "Эволюционируй или сдохни"</h1>
+                <div class="card__actions">
+                    <div class="actions__info">
+                        <p class="info__points">
+                            100 баллов
+                        </p>
+                        <button class="btn btn-blue card__btn">Заказать</button>
+                    </div>
+                    <div class="actions__balance">
+                        <p class="balance__desc">
+                            Твой баланс:
+                            <span class="balance__value">3945 баллов</span>
+                        </p>
+                        <span class="balance__logo">
+                            🛍
+                        </span>
+                    </div>
+                </div>
+                <div class="card__color">
+                    <span class="color__desc">Цвета:</span>
+                    <div class="card__options">
+                        <label>
+                            <input type="radio" name="color" class="card__radio" id="color-blue"  onclick="colorClick(event)" checked>
+                            <div class="radio__container">
+                                <div class="color__box" id="blue-darkest">
+                                </div>
+                                <span class="color__name">Синий</span>
+                            </div>
+                        </label>
+                        <label>
+                            <input type="radio" name="color" class="card__radio" id="color-milk" onclick="colorClick(event)">
+                            <div class="radio__container">
+                                <div class="color__box" id="milk">
+                                </div>
+                                <span class="color__name">Бежевый</span>
+                            </div>
+                        </label>
+                        <label>
+                            <input type="radio" name="color" class="card__radio" id="color-gray" onclick="colorClick(event)">
+                            <div class="radio__container">
+                                <div class="color__box" id="gray-lightest">
+                                </div>
+                                <span class="color__name">Серый</span>
+                            </div>
+                        </label>
+
+                    </div>
+                </div>
+                <div class="card__size">
+                    <span class="size__desc">Размеры:</span>
+                    <div class="card__options">
+                        <label>
+                            <input type="radio" name="size" class="card__radio" checked>
+                            <div class="radio__container">
+                                <span class="size__name">S</span>
+                            </div>
+                        </label>
+                        <label>
+                            <input type="radio" name="size" class="card__radio">
+                            <div class="radio__container">
+                                <span class="size__name">M</span>
+                            </div>
+                        </label>
+                        <label>
+                            <input type="radio" name="size" class="card__radio">
+                            <div class="radio__container">
+                                <span class="size__name">L</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="card__details">
+                    <span class="card__headers">Детали:</span>
+                    <p class="card__description">Брендированная толстовка от Qazaq Republic. Материал: Хлопок 80%, Вискоза 20%</p>
+                </div>
+                <div class="card__choose">
+                    <span class="card__headers">Как выбрать размер:</span>
+                    <p class="card__description">Написать дяде Рику для уточнения.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="./src/js/card.js"></script>
+</body>
+</html>

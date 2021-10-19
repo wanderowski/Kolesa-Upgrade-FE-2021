@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="/src/assets/favicon-32x32.png">
+    <link rel="stylesheet" href="/src/css/reset.css">
+    <title>Главная страница</title>
+</head>
+<body>
+
+    <div class="main">
+        <div class="main__modal modal js__modal">
+            <div class="modal__background js__background"></div>
+            <div class="container js__container">
+                <div class="modal__wrapper">
+                    <button class="modal__close js__close-button">
+                    </button>
+                        <div class="modal__pics">
+                            <div class="modal__pic">
+                                <img
+                                id="mainPreview"
+                                src=""
+                                alt=""
+                                width=330
+                                height=330
+                                >
+                            </div>
+                            <div class="modal__hint">
+                                <label>
+                                    <input type="radio" name="preview" class="modal__radio" id="preview-milk">
+                                    <img
+                                    src="./src/assets/🌆 preview_1.png"
+                                    alt="Бежевый цвет"
+                                    width=50
+                                    height=50
+                                    onclick="previewClick(event)">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="modal__desc">
+                            <h1 class="modal__name"></h1>
+                            <div class="modal__actions">
+                                <div class="modal__info">
+                                    <p class="modal__points">
+                                        баллов
+                                    </p>
+                                    <button class="btn btn--blue modal__btn">Заказать</button>
+                                </div>
+                                <div class="modal__balance">
+                                    <p class="modal__balance-desc">
+                                        Твой баланс:
+                                        <span class="modal__balance-value">3945 баллов</span>
+                                    </p>
+                                    <span class="modal__balance-logo">
+                                        🛍
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="modal__size">
+                                <span class="modal__size-desc">Размеры:</span>
+                                <div class="modal__options">
+                                    <label>
+                                        <input type="radio" name="size" class="modal__radio" checked>
+                                        <div class="modal__radio-container">
+                                            <span class="modal__size-name">S</span>
+                                        </div>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="size" class="modal__radio">
+                                        <div class="modal__radio-container">
+                                            <span class="modal__size-name">M</span>
+                                        </div>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="size" class="modal__radio">
+                                        <div class="modal__radio-container">
+                                            <span class="modal__size-name">L</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="modal__details">
+                                <span class="modal__headers">Детали:</span>
+                                <p class="modal__description">
+
+                                </p>
+                            </div>
+                            <div class="modal__choose">
+                                <span class="modal__headers">Как выбрать размер:</span>
+                                <p class="modal__description">Написать дяде Рику для уточнения.</p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="main__wrapper">
+                <a href="/main_page.html" class="main__logo">
+                    <img
+                    src="/src/assets/logo.svg"
+                    alt="Логотип"
+                    width="215"
+                    height="35">
+                </a>
+                <div class="main__aside">
+                    <nav class="nav">
+                        <a href="#" class="nav__item">Оргсхема</a>
+                        <a href="#" class="nav__item">Kolesa Team</a>
+                        <a href="#" class="nav__item nav__item-active">Kolesa Shop</a>
+                        <a href="#" class="nav__item">Картина компании</a>
+                        <a href="#" class="nav__item">Новости</a>
+                        <a href="#" class="nav__item">Education</a>
+                        <a href="#" class="nav__item">Guidelines</a>
+                        <a href="#" class="nav__item">Библиотека</a>
+                        <a href="#" class="nav__item">FAQ</a>
+                    </nav>
+                </div>
+                <header class="header">
+                    <div class="header__search search">
+                        <button
+                            class="search__icon" aria-label="Поиск">
+                        </button>
+                        <input
+                            type="search"
+                            class="search__field"
+                            placeholder="Поиск"
+                        >
+                    </div>
+                    <a href="#" class="user">
+                        <img
+                            src="/src/assets/avatar.png"
+                            alt="Аватар"
+                            width="44"
+                            height="44"
+                            class="user__avatar">
+                        <span class="user__desc">
+                            <span class="user__name">
+                                Мортиджан
+                            </span>
+                            <span class="user__points">
+                                300 баллов
+                            </span>
+                        </span>
+                    </a>
+                </header>
+                <div class="main__content">
+                    <img src="/src/assets/banner.png" alt="Летняя Распродажа" class="main__banner">
+                    <div class="main__points points">
+                        <button class="points__box points__get">
+                            <img
+                            src="/src/assets/emoji_plus.png"
+                            alt="Получить"
+                            class="points__emoji"
+                            width="48"
+                            >
+                            <span class="points__desc">Получить баллы</span>
+                        </button>
+                        <button class="points__box points__howto">
+                            <img
+                            src="/src/assets/emoji_question.png"
+                            alt="Как получить"
+                            class="points__emoji"
+                            width="48">
+
+                            <span class="points__desc">Как получить баллы</span>
+                        </button>
+                        <button class="points__box points__gift">
+                            <img
+                            src="/src/assets/emoji_gift.png"
+                            alt="Подарить"
+                            class="points__emoji"
+                            width="48">
+                            <span class="points__desc">Подарить баллы</span>
+                        </button>
+                    </div>
+                    <div class="main__products products">
+                        <div class="products__types">
+                            <input data-key="all" type="radio" name="Type" class="products__radio js__category-button" id="all" checked>
+                            <label class="products__type" for="all">
+                                Все товары
+                            </label>
+                            <input data-key="clothes" type="radio" name="Type" class="products__radio js__category-button" id="clothes">
+                            <label class="products__type" for="clothes">
+                                Одежда
+                            </label>
+                            <input data-key="accessories" type="radio" name="Type" class="products__radio js__category-button" id="accessories">
+                            <label class="products__type" for="accessories">
+                                Аксессуары
+                            </label>
+                        </div>
+                        <div class="products__cards js__catalog">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__social">
+                    <span class="footer__copyright">
+                        © Kolesa Group
+                    </span>
+                    <div class="footer__icons">
+                        <a href="https://vk.com/kolesakz" target="_blank"><img src="/src/assets/VK.png" alt="VK" class="footer__icon"></a>
+                        <a href="https://www.youtube.com/user/kolesakzvideo" target="_blank"><img src="/src/assets/YouTube.png" alt="YouTube" class="footer__icon"></a>
+                        <a href="https://www.instagram.com/kolesagroup/" target="_blank"><img src="/src/assets/Instagram.png" alt="Instagram" class="footer__icon"></a>
+                    </div>
+                </div>
+                <div class="footer__contact">
+                    <span class="footer__desc">
+                        Есть идеи что улучшить?<br>Не знаешь, с кем решить проблему?
+                    </span>
+                    <button class="btn btn--white">
+                        Написать
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <script type="module" src="/src/js/main_page.js"></script>
+
+</body>
+</html>
