@@ -10,22 +10,23 @@
                         <div class="modal__pics">
                             <div class="modal__pic">
                                 <img
-                                id="mainPreview"
-                                :src="require('./assets/' + openedItem.img)"
-                                :alt="openedItem.title"
-                                width=330
-                                height=330
+                                    id="mainPreview"
+                                    :src="require('./assets/' + openedItem.img)"
+                                    :alt="openedItem.title"
+                                    width=330
+                                    height=330
                                 >
                             </div>
                             <div class="modal__hint">
                                 <label>
                                     <input type="radio" name="preview" class="modal__radio" id="preview-milk">
                                     <img
-                                    src="./assets/🌆 preview_1.png"
-                                    alt="Бежевый цвет"
-                                    width=50
-                                    height=50
-                                    onclick="previewClick(event)">
+                                        src="./assets/🌆 preview_1.png"
+                                        alt="Бежевый цвет"
+                                        width=50
+                                        height=50
+                                        onclick="previewClick(event)"
+                                    >
                                 </label>
                             </div>
                         </div>
@@ -96,7 +97,14 @@
                 </a>
                 <div class="main__aside">
                     <nav class="nav">
-                        <a v-for="(item, index) in navItems" :class="{'nav__item': true, 'nav__item-active': item.active}" :key="index">{{item.title}}</a>
+                        <a
+                        v-for="(item, index) in navItems"
+                        class="nav__item"
+                        :class="{'nav__item-active': item.active}"
+                        :key="index"
+                        >
+                            {{ item.title }}
+                        </a>
                     </nav>
                 </div>
                 <header class="header">
@@ -105,18 +113,18 @@
                             class="search__icon" aria-label="Поиск">
                         </button>
                         <input
-                            type="search"
-                            class="search__field"
-                            placeholder="Поиск"
+                        type="search"
+                        class="search__field"
+                        placeholder="Поиск"
                         >
                     </div>
                     <a href="#" class="user">
                         <img
-                            src="./assets/avatar.png"
-                            alt="Аватар"
-                            width="44"
-                            height="44"
-                            class="user__avatar">
+                        src="./assets/avatar.png"
+                        alt="Аватар"
+                        width="44"
+                        height="44"
+                        class="user__avatar">
                         <span class="user__desc">
                             <span class="user__name">
                                 Мортиджан
@@ -128,7 +136,11 @@
                     </a>
                 </header>
                 <div class="main__content">
-                    <img src="./assets/banner.png" alt="Летняя Распродажа" class="main__banner">
+                    <img
+                    src="./assets/banner.png"
+                    alt="Летняя Распродажа"
+                    class="main__banner"
+                    >
                     <div class="main__points points">
                         <button class="points__box points__get">
                             <img
@@ -159,21 +171,45 @@
                     </div>
                     <div class="main__products products">
                         <div class="products__types">
-                            <input data-key="all" type="radio" name="Type" class="products__radio" id="all" checked @click="categorySelect('all')">
+                            <input
+                            data-key="all"
+                            type="radio"
+                            name="Type"
+                            class="products__radio"
+                            id="all"
+                            checked
+                            @click="categorySelect('all')"
+                            >
                             <label class="products__type" for="all">
                                 Все товары
                             </label>
-                            <input data-key="clothes" type="radio" name="Type" class="products__radio" id="clothes" @click="categorySelect('clothes')">
+                            <input
+                            data-key="clothes"
+                            type="radio"
+                            name="Type"
+                            class="products__radio"
+                            id="clothes"
+                            @click="categorySelect('clothes')">
                             <label class="products__type" for="clothes">
                                 Одежда
                             </label>
-                            <input data-key="accessories" type="radio" name="Type" class="products__radio" id="accessories" @click="categorySelect('accessories')">
+                            <input
+                            data-key="accessories"
+                            type="radio"
+                            name="Type"
+                            class="products__radio"
+                            id="accessories"
+                            @click="categorySelect('accessories')">
                             <label class="products__type" for="accessories">
                                 Аксессуары
                             </label>
                         </div>
                         <div class="products__cards">
-                            <div class="card" v-for="product in productsToRender" :key="product.id" @click="openModal(product.id)">
+                            <div
+                            class="card"
+                            v-for="product in productsToRender"
+                            :key="product.id"
+                            @click="openModal(product.id)">
                                 <img
                                     :src="require('./assets/' + product.img)"
                                     :alt="product.title"
