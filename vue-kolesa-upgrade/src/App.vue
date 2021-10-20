@@ -74,7 +74,7 @@
                             <div class="modal__details">
                                 <span class="modal__headers">Детали:</span>
                                 <p class="modal__description">
-
+                                    {{ openedItem.details }}
                                 </p>
                             </div>
                             <div class="modal__choose">
