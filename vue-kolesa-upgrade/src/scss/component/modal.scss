@@ -1,0 +1,243 @@
+
+.modal {
+    display: block;
+    width: 1400px;
+
+    &__background {
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.3);
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    &__wrapper {
+        position: relative;
+        background-color: #fff;
+        border-radius: 16px;
+        max-width: 1100px;
+        min-width: 700px;
+        padding: 64px;
+        gap: 24px;
+        display: grid;
+        grid-template-columns: 330px 1fr;
+        align-content: flex-start;
+        box-shadow: 0 0 14px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    &__close {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        width: 18px;
+        height: 18px;
+        background-image: url('../assets/close.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: none;
+        cursor: pointer;
+    }
+
+    &__pics {
+        @include flex-column;
+
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__hint {
+        padding: 16px 0;
+        display: flex;
+        align-items: center;
+        max-width: 330px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    &__radio {
+        position: absolute;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+
+    &__radio + img {
+        cursor: pointer;
+        padding: 0 5px;
+    }
+
+    &__radio:checked + img {
+        border: 1px solid $blue-main;
+        border-radius: 5px;
+    }
+
+    &__btn {
+        margin-top: 8px;
+    }
+
+    &__desc {
+        display: block;
+    }
+
+    &__name {
+        margin: 8px 0;
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 0 12px;
+    }
+
+    &__info {
+        display: block;
+    }
+
+    &__points {
+        margin: 8px 0;
+        font-weight: 600;
+    }
+
+    &__balance {
+        background: #f0fafd;
+        border: none;
+        border-radius: 5px;
+        padding: 8px 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__balance-desc {
+        @include flex-column;
+
+        padding: 0 6px;
+        height: 100%;
+        font-size: 14px;
+        font-weight: 400;
+        color: $gray;
+        align-items: flex-start;
+        justify-content: space-between
+    }
+
+    &__balance-value {
+        color: $black-primary;
+        font-size: 16px;
+        padding-top: 12px;
+    }
+
+    &__balance-logo {
+        font-size: 40px;
+        padding-left: 12px;
+    }
+
+    &__color {
+        @include flex-column;
+
+        padding: 12px 0;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    &__color-desc {
+        font-size: 14px;
+    }
+
+    &__options {
+        width: 100%;
+        padding: 8px 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    &__options label {
+        border: 1px solid #1c18191a;
+        border-radius: 4px;
+        overflow: hidden;
+        margin: 5px 8px 5px 0;
+    }
+
+    &__radio-container {
+        padding: 8px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__radio + &__radio-container {
+        cursor: pointer;
+    }
+
+    &__radio:checked + &__radio-container {
+        background-color: $blue-light;
+    }
+
+    &__color-box {
+        width: 25px;
+        height: 25px;
+        border-radius: 4px;
+    }
+
+    &__color-name {
+        padding: 0 8px;
+    }
+
+    &__size {
+        @include flex-column;
+
+        padding: 12px 0;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    &__size-desc {
+        font-size: 14px;
+    }
+
+    &__size-name {
+        padding: 0 8px;
+    }
+
+    &__details {
+        @include flex-column;
+
+        padding: 12px 0;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    &__headers {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 24px;
+    }
+
+    &__description {
+        font-weight: 400;
+        font-size: 14px;
+        padding-top: 4px;
+        line-height: 24px;
+    }
+
+    &__choose {
+        padding: 12px 0;
+    }
+}
+
+#blue-darkest {
+    background-color: $blue-darkest;
+}
+
+#milk {
+    background-color: $milk;
+}
+
+#gray-lightest {
+    background-color: $gray-lightest;
+}
