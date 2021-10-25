@@ -121,7 +121,7 @@
         font-size: 14px;
         font-weight: 400;
         color: $gray;
-        align-items: start;
+        align-items: flex-start;
         justify-content: space-between
     }
 
@@ -208,7 +208,7 @@
         @include flex-column;
 
         padding: 12px 0;
-        align-items: start;
+        align-items: flex-start;
         justify-content: space-between;
     }
 

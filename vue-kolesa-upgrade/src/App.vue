@@ -457,7 +457,6 @@ export default {
             openedItem: {},
         };
     },
-
     computed: {
         all() {
             const all = this.clothes.concat(this.accessories);
@@ -482,7 +481,6 @@ export default {
                 );
             });
         },
-
         closeModal() {
             this.modalShow = false;
         },
