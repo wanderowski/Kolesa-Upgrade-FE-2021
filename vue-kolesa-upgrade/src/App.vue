@@ -194,7 +194,12 @@ export default {
                 this.categoryToRender = "accessories";
             }
         },
+        restoreItems() {
+            this.clothes = this.backup.clothes;
+            this.accessories = this.backup.accessories;
+        },
         searchCard(title) {
+            this.restoreItems();
             if (title) {
                 this.clothes = this.clothes.filter((item) =>
                     item.title.includes(title)
@@ -203,8 +208,7 @@ export default {
                     item.title.includes(title)
                 );
             } else {
-                this.clothes = this.backup.clothes;
-                this.accessories = this.backup.accessories;
+                this.restoreItems();
             }
         },
         setUser(user) {

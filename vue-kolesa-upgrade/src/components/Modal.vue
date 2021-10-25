@@ -53,7 +53,7 @@
                             <p class="modal__balance-desc">
                                 Твой баланс:
                                 <span class="modal__balance-value"
-                                    >3945 баллов</span
+                                    >{{ userScore }} баллов</span
                                 >
                             </p>
                             <span class="modal__balance-logo"> 🛍 </span>
