@@ -20,13 +20,13 @@
 
             <div class="card__sizes">
                 <span v-if="product.sizes && product.sizes.length"
-                    >Размеры</span
-                >
-                <div v-else>Информации о размерах нет</div>
-                <span v-for="(size, index) in product.sizes">
-                    {{ size }}
-                    <span v-if="index !== product.sizes.length - 1">/</span>
+                    >Размеры
+                    <span v-for="(size, index) in product.sizes" :key="index">
+                        {{ size }}
+                        <span v-if="index !== product.sizes.length - 1">/</span>
+                    </span>
                 </span>
+                <div v-else>Информации о размерах нет</div>
             </div>
             <button class="btn btn--blue card__btn" @click="openModal(product)">
                 Заказать

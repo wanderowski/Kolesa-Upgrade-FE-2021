@@ -36,17 +36,17 @@
                         />
                         <div class="main__points points">
                             <hot-key
-                                v-for="hotKey in hotKeys"
+                                v-for="(hotKey, index) in hotKeys"
                                 :hot-key="hotKey"
-                                :key="hotKey.id"
+                                :key="index"
                             ></hot-key>
                         </div>
                         <div class="main__products products">
                             <div class="products__types">
                                 <filter-categories
-                                    v-for="filter in filters"
+                                    v-for="(filter, index) in filters"
                                     :details="filter"
-                                    :key="filter"
+                                    :key="index"
                                     @categorySelect="categorySelect"
                                 />
                             </div>
