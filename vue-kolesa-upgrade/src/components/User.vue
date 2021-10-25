@@ -15,26 +15,26 @@
 </template>
 
 <script>
-import axios from "../axios";
+import axios from "../axios.js";
 
 export default {
     name: "User",
     props: {
-        userData: Object
+        userData: Object,
     },
     data() {
         return {
             name: "",
-            points: 0
+            points: 0,
         };
     },
     created() {
-        axios.get("templates/7ZW3y5GAuIge/data").then(response => {
+        axios.get("templates/7ZW3y5GAuIge/data").then((response) => {
             this.name = response.data.name;
             this.points = response.data.score;
 
             this.$emit("userInfo", { name: this.name, score: this.points });
         });
-    }
+    },
 };
 </script>

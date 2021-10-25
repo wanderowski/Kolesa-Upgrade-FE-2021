@@ -1,5 +1,5 @@
 <template>
-    <div class="card" :key="product.id" @click="openModal(product)">
+    <div class="card" @click="openModal(product)">
         <img
             :src="
                 product.mainImage
@@ -18,8 +18,17 @@
             </span>
             <span v-if="product.isNew" class="card__new">NEW</span>
 
-            <span class="card__sizes"> Размеры S/M/L </span>
-            <button class="btn btn--blue" @click="openModal(product)">
+            <div class="card__sizes">
+                <span v-if="product.sizes && product.sizes.length"
+                    >Размеры</span
+                >
+                <div v-else>Информации о размерах нет</div>
+                <span v-for="(size, index) in product.sizes">
+                    {{ size }}
+                    <span v-if="index !== product.sizes.length - 1">/</span>
+                </span>
+            </div>
+            <button class="btn btn--blue card__btn" @click="openModal(product)">
                 Заказать
             </button>
         </div>
