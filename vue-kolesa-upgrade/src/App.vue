@@ -225,20 +225,8 @@ export default {
                 this.categoryToRender = "accessories";
             }
         },
-        // restoreItems() {
-        //     this.clothes = this.backup.clothes;
-        //     this.accessories = this.backup.accessories;
-        // },
+
         setSearchValue(searchValue) {
-            // this.restoreItems();
-            // if (searchValue) {
-            //     this.clothes = this.clothes.filter((item) =>
-            //         item.title.includes(searchValue)
-            //     );
-            //     this.accessories = this.accessories.filter((item) =>
-            //         item.title.includes(searchValue)
-            //     );
-            // }
             this.searchValue = searchValue;
         },
         setUser(user) {
@@ -257,10 +245,6 @@ export default {
         ]).then((response) => {
             this.clothes = response[0].data;
             this.accessories = response[1].data;
-            // this.backup = {
-            //     clothes: this.clothes,
-            //     accessories: this.accessories,
-            // };
         });
     },
 };
