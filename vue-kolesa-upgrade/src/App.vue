@@ -22,9 +22,9 @@
                         <navigation :navItems="navItems"></navigation>
                     </div>
                     <header class="header">
-                        <search @searchCard="searchCard"></search>
+                        <search @searchData="setSearchValue"></search>
                         <user
-                            :userData="{ name: username, score: score }"
+                            :localData="{ name: username, score: score }"
                             @userInfo="setUser"
                         ></user>
                     </header>
@@ -141,6 +141,7 @@ export default {
             backup: {},
             username: "",
             score: 0,
+            searchValue: "",
         };
     },
     components: {
@@ -156,18 +157,48 @@ export default {
 
     computed: {
         all() {
-            const all = this.clothes.concat(this.accessories);
-            this.sortEachCategory([all, this.clothes, this.accessories]);
+            const all = this.clearClothesData.concat(this.clearAccessoriesData);
+            this.sortEachCategory([
+                all,
+                this.clearClothesData,
+                this.clearAccessoriesData,
+            ]);
             return all;
         },
         productsToRender() {
             if (this.categoryToRender === "all") {
                 return this.all;
             } else if (this.categoryToRender === "clothes") {
-                return this.clothes;
+                return this.clearClothesData;
             } else if (this.categoryToRender === "accessories") {
-                return this.accessories;
+                return this.clearAccessoriesData;
             }
+        },
+        clearClothesData() {
+            let clearData = [];
+
+            if (this.searchValue !== "") {
+                clearData = this.clothes.filter((item) =>
+                    item.title.includes(this.searchValue)
+                );
+            } else {
+                clearData = this.clothes;
+            }
+
+            return clearData;
+        },
+        clearAccessoriesData() {
+            let clearData = [];
+
+            if (this.searchValue !== "") {
+                clearData = this.accessories.filter((item) =>
+                    item.title.includes(this.searchValue)
+                );
+            } else {
+                clearData = this.accessories;
+            }
+
+            return clearData;
         },
     },
     methods: {
@@ -194,22 +225,21 @@ export default {
                 this.categoryToRender = "accessories";
             }
         },
-        restoreItems() {
-            this.clothes = this.backup.clothes;
-            this.accessories = this.backup.accessories;
-        },
-        searchCard(title) {
-            this.restoreItems();
-            if (title) {
-                this.clothes = this.clothes.filter((item) =>
-                    item.title.includes(title)
-                );
-                this.accessories = this.accessories.filter((item) =>
-                    item.title.includes(title)
-                );
-            } else {
-                this.restoreItems();
-            }
+        // restoreItems() {
+        //     this.clothes = this.backup.clothes;
+        //     this.accessories = this.backup.accessories;
+        // },
+        setSearchValue(searchValue) {
+            // this.restoreItems();
+            // if (searchValue) {
+            //     this.clothes = this.clothes.filter((item) =>
+            //         item.title.includes(searchValue)
+            //     );
+            //     this.accessories = this.accessories.filter((item) =>
+            //         item.title.includes(searchValue)
+            //     );
+            // }
+            this.searchValue = searchValue;
         },
         setUser(user) {
             this.username = user.name;
@@ -217,6 +247,7 @@ export default {
         },
         setOrder(cost) {
             this.score -= cost;
+            alert("Заказ оформлен");
         },
     },
     created() {
@@ -226,10 +257,10 @@ export default {
         ]).then((response) => {
             this.clothes = response[0].data;
             this.accessories = response[1].data;
-            this.backup = {
-                clothes: this.clothes,
-                accessories: this.accessories,
-            };
+            // this.backup = {
+            //     clothes: this.clothes,
+            //     accessories: this.accessories,
+            // };
         });
     },
 };

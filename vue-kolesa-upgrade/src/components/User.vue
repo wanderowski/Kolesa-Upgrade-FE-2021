@@ -8,8 +8,8 @@
             class="user__avatar"
         />
         <span class="user__desc">
-            <span class="user__name"> {{ userData.name }} </span>
-            <span class="user__points"> {{ userData.score }} баллов </span>
+            <span class="user__name"> {{ localData.name }} </span>
+            <span class="user__points"> {{ localData.score }} баллов </span>
         </span>
     </a>
 </template>
@@ -20,7 +20,7 @@ import axios from "../axios.js";
 export default {
     name: "User",
     props: {
-        userData: Object,
+        localData: Object,
     },
     data() {
         return {

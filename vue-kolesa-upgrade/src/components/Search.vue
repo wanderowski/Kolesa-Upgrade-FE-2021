@@ -5,8 +5,8 @@
             type="search"
             class="search__field"
             placeholder="Поиск"
-            v-model="search"
-            @change="searchCard"
+            v-model="searchValue"
+            @change="searchData"
         />
     </form>
 </template>
@@ -16,12 +16,12 @@ export default {
     name: "Search",
     data() {
         return {
-            search: "",
+            searchValue: "",
         };
     },
     methods: {
-        searchCard() {
-            this.$emit("searchCard", this.search);
+        searchData() {
+            this.$emit("searchData", this.searchValue);
         },
         noReloading(e) {
             e.preventDefault();
