@@ -1,6 +1,7 @@
 import Home from "../views/Home.vue";
 import Vue from "vue";
 import VueRouter from "vue-router";
+import loader from "sass-loader";
 
 Vue.use(VueRouter);
 
@@ -37,6 +38,25 @@ const router = new VueRouter({
     mode: "history",
     base: process.env.BASE_URL,
     routes,
+});
+
+router.beforeEach((to, from, next) => {
+    const loader = document.querySelector(".loader");
+
+    if (loader) {
+        loader.style.display = "flex";
+    }
+    next();
+});
+
+router.afterEach(() => {
+    const loader = document.querySelector(".loader");
+
+    if (loader) {
+        setTimeout(() => {
+            loader.style.display = "none";
+        }, 500);
+    }
 });
 
 export default router;
