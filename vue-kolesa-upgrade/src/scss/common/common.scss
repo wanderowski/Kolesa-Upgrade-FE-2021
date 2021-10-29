@@ -32,7 +32,6 @@
 }
 
 .header-text {
-    font-size: 20px;
-    line-height: 32px;
-    font-weight: 600;
+    @include font-format(20px, 600, 32px);
+
 }
