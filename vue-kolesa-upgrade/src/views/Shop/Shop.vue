@@ -3,7 +3,6 @@
         <modal
             :openedItem="openedItem"
             :isOpen="modalShow"
-            :user-score="score"
             @close="closeModal"
             @order="setOrder"
         ></modal>
@@ -50,14 +49,10 @@ import Card from "./components/Card.vue";
 import FilterCategories from "./components/FilterCategories.vue";
 import HotKey from "./components/HotKey.vue";
 import Modal from "./components/Modal.vue";
-import axios from "../../axios";
-
+import { mapState } from "vuex";
 export default {
     data() {
         return {
-            clothes: [],
-            accessories: [],
-
             hotKeys: [
                 {
                     url: "/get",
@@ -99,11 +94,6 @@ export default {
             categoryToRender: "all",
             openedItem: {},
         };
-    },
-    props: {
-        score: Number,
-        setOrder: Function,
-        searchValue: String,
     },
     components: {
         Card,
@@ -156,15 +146,15 @@ export default {
 
             return clearData;
         },
+        ...mapState({
+            userData: "userData",
+            clothes: "clothes",
+            accessories: "accessories",
+            searchValue: "searchValue",
+        }),
     },
     mounted() {
-        Promise.all([
-            axios.get("templates/-_RLsEGjof6i/data"),
-            axios.get("templates/q3OPxRyEcPvP/data"),
-        ]).then((response) => {
-            this.clothes = response[0].data;
-            this.accessories = response[1].data;
-        });
+        this.$store.dispatch("fetchShopData");
     },
     methods: {
         sortEachCategory(allCategories) {
@@ -189,6 +179,10 @@ export default {
             } else if (category === "accessories") {
                 this.categoryToRender = "accessories";
             }
+        },
+        setOrder(cost) {
+            this.$store.dispatch("submitOrder", cost);
+            alert("Заказ оформлен!");
         },
     },
 };

@@ -16,16 +16,9 @@
                     </div>
                     <header class="header">
                         <search @searchData="setSearchValue"></search>
-                        <user
-                            :localData="{ name: username, score: score }"
-                            @userInfo="setUser"
-                        ></user>
+                        <user></user>
                     </header>
-                    <router-view
-                        :score="score"
-                        :setOrder="setOrder"
-                        :searchValue="searchValue"
-                    />
+                    <router-view />
                 </div>
             </div>
         </div>
@@ -38,6 +31,7 @@ import FooterBlack from "@/layouts/components/FooterBlack.vue";
 import Navigation from "@/layouts/components/Navigation.vue";
 import Search from "@/layouts/components/Search.vue";
 import User from "@/layouts/components/User.vue";
+import { mapState } from "vuex";
 
 export default {
     name: "App",
@@ -54,12 +48,12 @@ export default {
                 { title: "Библиотека", url: "/library", exact: false },
                 { title: "FAQ", url: "/faq", exact: false },
             ],
-
-            username: "",
-            score: 0,
             searchValue: "",
         };
     },
+    computed: mapState({
+        userData: "userData",
+    }),
     components: {
         FooterBlack,
         Navigation,
@@ -69,15 +63,7 @@ export default {
 
     methods: {
         setSearchValue(searchValue) {
-            this.searchValue = searchValue;
-        },
-        setUser(user) {
-            this.username = user.name;
-            this.score = user.score;
-        },
-        setOrder(cost) {
-            this.score -= cost;
-            alert("Заказ оформлен!");
+            this.$store.commit("setSearchValue", searchValue);
         },
     },
 };

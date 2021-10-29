@@ -53,7 +53,7 @@
                             <p class="modal__balance-desc">
                                 Твой баланс:
                                 <span class="modal__balance-value"
-                                    >{{ userScore }} баллов</span
+                                    >{{ userData.score }} баллов</span
                                 >
                             </p>
                             <span class="modal__balance-logo"> 🛍 </span>
@@ -98,6 +98,7 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 export default {
     name: "Modal",
     data() {
@@ -105,17 +106,19 @@ export default {
             mainPreview: "",
         };
     },
+    computed: mapState({
+        userData: "userData",
+    }),
     props: {
         openedItem: Object,
         isOpen: Boolean,
-        userScore: Number,
     },
     methods: {
         closeModal() {
             this.$emit("close");
         },
         order() {
-            if (this.userScore > this.openedItem.price) {
+            if (this.userData.score > this.openedItem.price) {
                 this.$emit("order", this.openedItem.price);
                 this.closeModal();
             } else {
@@ -128,5 +131,3 @@ export default {
     },
 };
 </script>
-
-<style lang="scss"></style>
