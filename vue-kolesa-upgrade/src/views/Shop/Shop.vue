@@ -60,17 +60,20 @@ export default {
 
             hotKeys: [
                 {
+                    url: "/get",
                     type: "get",
                     img: "/emoji_plus.png",
                     desc: "Получить баллы",
                 },
                 {
+                    url: "/howto",
                     type: "howto",
                     img: "/emoji_question.png",
                     desc: "Как получить баллы",
                 },
                 {
-                    type: "dift",
+                    url: "/gift",
+                    type: "gift",
                     img: "/emoji_gift.png",
                     desc: "Подарить баллы",
                 },

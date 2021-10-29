@@ -46,7 +46,7 @@ export default {
             navItems: [
                 { title: "Оргсхема", url: "/", exact: true },
                 { title: "Kolesa Team", url: "/about", exact: false },
-                { title: "Kolesa Shop", url: "/shop", exact: true },
+                { title: "Kolesa Shop", url: "/shop", exact: false },
                 { title: "Картина компании", url: "/view", exact: false },
                 { title: "Новости", url: "/news", exact: false },
                 { title: "Education", url: "/education", exact: false },
@@ -74,6 +74,10 @@ export default {
         setUser(user) {
             this.username = user.name;
             this.score = user.score;
+        },
+        setOrder(cost) {
+            this.score -= cost;
+            alert("Заказ оформлен!");
         },
     },
 };

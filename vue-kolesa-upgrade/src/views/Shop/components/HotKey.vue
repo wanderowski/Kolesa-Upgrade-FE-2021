@@ -1,5 +1,6 @@
 <template>
-    <button
+    <router-link
+        :to="'/shop' + hotKey.url"
         class="points__box"
         :class="
             hotKey.type === 'get'
@@ -16,7 +17,7 @@
             width="48"
         />
         <span class="points__desc">{{ hotKey.desc }} </span>
-    </button>
+    </router-link>
 </template>
 
 <script>
