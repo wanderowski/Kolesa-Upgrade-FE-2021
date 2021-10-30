@@ -4,7 +4,8 @@
     position: relative;
     width: 330px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 16px;
     border-radius: 8px;
     transition: 0.1s all;
 
@@ -29,7 +30,7 @@
     }
 
     &__points {
-        padding: 16px 0 8px;
+        padding-bottom: 8px;
         color: $blue-main;
         font-weight: 600;
         font-size: 24px;
@@ -52,7 +53,9 @@
         line-height: 24px;
         font-weight: 400;
         color: $gray;
-        padding-bottom: 16px;
+    }
+    &__btn {
+        margin-top: 16px;
     }
 }
 

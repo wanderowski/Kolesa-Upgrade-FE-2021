@@ -27,7 +27,7 @@
         @include flex-column;
 
         grid-area: aside;
-        align-items: start;
+        align-items: flex-start;
         justify-content: flex-start;
     }
 
@@ -60,9 +60,6 @@
     }
 
     &__products {
-        @include flex-column;
-
-        align-items: flex-start;
-        width: 100%;
+        gap: 16px;
     }
 }
