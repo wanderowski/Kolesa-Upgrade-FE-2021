@@ -1,5 +1,6 @@
 <template>
     <div id="app">
+        <loader />
         <div class="main">
             <div class="container">
                 <div class="main__wrapper">
@@ -31,6 +32,7 @@ import FooterBlack from "@/layouts/components/FooterBlack.vue";
 import Navigation from "@/layouts/components/Navigation.vue";
 import Search from "@/layouts/components/Search.vue";
 import User from "@/layouts/components/User.vue";
+import Loader from "@/layouts/components/Loader.vue";
 import { mapState } from "vuex";
 
 export default {
@@ -59,6 +61,7 @@ export default {
         Navigation,
         Search,
         User,
+        Loader,
     },
 
     methods: {

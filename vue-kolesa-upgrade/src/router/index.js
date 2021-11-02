@@ -36,21 +36,4 @@ const router = new VueRouter({
     routes,
 });
 
-router.beforeEach((to, from, next) => {
-    const loader = document.querySelector(".loader");
-
-    if (loader) {
-        loader.style.display = "flex";
-    }
-    next();
-});
-
-router.afterEach(() => {
-    const loader = document.querySelector(".loader");
-
-    if (loader) {
-        loader.style.display = "none";
-    }
-});
-
 export default router;
