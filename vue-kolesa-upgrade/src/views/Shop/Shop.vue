@@ -147,7 +147,6 @@ export default {
             return clearData;
         },
         ...mapState({
-            userData: "userData",
             clothes: "clothes",
             accessories: "accessories",
             searchValue: "searchValue",
