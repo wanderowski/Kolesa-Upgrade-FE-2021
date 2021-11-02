@@ -13,6 +13,7 @@ export default new Vuex.Store({
         clothes: [],
         accessories: [],
         searchValue: "",
+        isLoading: true,
     },
     mutations: {
         setUserData(state, payload) {
@@ -26,6 +27,9 @@ export default new Vuex.Store({
         },
         setSearchValue(state, payload) {
             state.searchValue = payload;
+        },
+        setIsLoading(state, payload) {
+            state.isLoading = payload;
         },
     },
     actions: {

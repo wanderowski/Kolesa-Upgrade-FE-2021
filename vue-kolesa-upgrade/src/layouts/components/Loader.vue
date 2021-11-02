@@ -1,33 +1,16 @@
 <template>
-    <div class="loader">
+    <div class="loader" v-if="isLoading">
         <div class="loader__wrapper"></div>
     </div>
 </template>
 
 <script>
-import router from "@/router/index.js";
-
-router.beforeEach((to, from, next) => {
-    const loader = document.querySelector(".loader");
-
-    if (loader) {
-        loader.style.display = "flex";
-    }
-    next();
-});
-
-router.afterEach(() => {
-    const loader = document.querySelector(".loader");
-
-    if (loader) {
-        setTimeout(() => {
-            loader.style.display = "none";
-        }, 300);
-    }
-});
-
+import { mapState } from "vuex";
 export default {
     name: "Loader",
+    computed: mapState({
+        isLoading: "isLoading",
+    }),
 };
 </script>
 

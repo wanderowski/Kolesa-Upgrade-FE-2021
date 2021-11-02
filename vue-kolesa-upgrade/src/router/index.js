@@ -1,6 +1,7 @@
 import Home from "../views/Home.vue";
 import Vue from "vue";
 import VueRouter from "vue-router";
+import store from "../store";
 
 Vue.use(VueRouter);
 
@@ -34,6 +35,14 @@ const router = new VueRouter({
     mode: "history",
     base: process.env.BASE_URL,
     routes,
+});
+
+router.afterEach(() => {
+    store.commit("setIsLoading", false);
+});
+router.beforeEach((to, from, next) => {
+    store.commit("setIsLoading", true);
+    next();
 });
 
 export default router;
