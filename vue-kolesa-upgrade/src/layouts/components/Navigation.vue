@@ -1,13 +1,15 @@
 <template>
     <nav class="nav">
-        <a
+        <router-link
+            :to="item.url"
             v-for="(item, index) in navItems"
             class="nav__item"
-            :class="{ 'nav__item-active': item.active }"
+            :exact="item.exact"
+            active-class="nav__item-active"
             :key="index"
         >
             {{ item.title }}
-        </a>
+        </router-link>
     </nav>
 </template>
 

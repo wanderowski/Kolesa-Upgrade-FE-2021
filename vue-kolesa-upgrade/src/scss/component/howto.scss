@@ -1,0 +1,63 @@
+.howto {
+    @include flex-column;
+    width: 100%;
+    align-items: flex-start;
+    gap: 24px;
+
+    &__header-text {
+        margin-top: 24px;
+        color: $black-primary;
+    }
+
+    &__cards {
+        display: inline-flex;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+
+    &__card {
+        @include flex-column;
+        padding: 24px;
+        width: 330px;
+        height: 324px;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 16px;
+        -webkit-box-shadow: 0px 4px 12px 0px rgba(34, 60, 80, 0.2);
+        -moz-box-shadow: 0px 4px 12px 0px rgba(34, 60, 80, 0.2);
+        box-shadow: 0px 4px 12px 0px rgba(34, 60, 80, 0.2);
+
+        &:hover {
+            -webkit-box-shadow: 0px 4px 12px 0px rgba(34, 60, 80, 0.2);
+            -moz-box-shadow: 0px 4px 12px 0px rgba(34, 60, 80, 0.2);
+            box-shadow: 0px 8px 16px 4px rgba(34, 60, 80, 0.2);
+        }
+    }
+
+
+    &__main-info {
+        @include flex-column;
+        align-items: flex-start;
+        gap: 8px;
+
+    }
+    &__title {
+        @include font-format(16px, 600, 24px);
+
+        color: $black;
+    }
+    &__reward {
+        @include font-format($size: 13px);
+        padding: 0 12px;
+        background-color: $payed-blue;
+        border-radius: 4px;
+    }
+    &__description {
+        @include font-format( $line-height: 24px);
+
+    }
+    &__btn {
+        width: 100%;
+    }
+
+}

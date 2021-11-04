@@ -1,8 +1,8 @@
 @import './common/reset.css';
 @import './common/vars.scss';
+@import './common/mixins.scss';
 @import './common/common.scss';
 @import './common/fonts.scss';
-@import './common/mixins.scss';
 @import './component/card.scss';
 @import './component/footer.scss';
 @import './component/header.scss';
@@ -13,6 +13,7 @@
 @import './component/search.scss';
 @import './component/user.scss';
 @import './component/modal.scss';
+@import './component/howto.scss';
 
 body, html, #app {
     height: 100%;
